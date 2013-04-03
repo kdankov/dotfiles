@@ -1,3 +1,6 @@
 [submodule "config/vim"]
 	path = config/vim
 	url = git@github.com:kdankov/vim.git
+[submodule "bin/wp-cli"]
+	path = bin/wp-cli
+	url = git://github.com/wp-cli/wp-cli.git
