@@ -1,0 +1,8 @@
+export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export PATH=/usr/local/bin:~/bin:$PATH:/usr/bin:/usr/local/mysql/bin:~/.dotfiles/bin
+
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+
+set -o vi

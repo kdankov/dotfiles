@@ -1,0 +1,36 @@
+[user]
+	name = Konstantin Dankov
+	email = konstantin.dankov@gmail.com
+[color]
+	ui = auto
+[apply]
+	whitespace = nowarn
+[alias]
+	co = checkout
+	br = branch
+[core]
+	editor = mvim
+	autocrlf = input
+	excludesfile = ~/.dotfiles/config/git/gitexcludes
+
+[github]
+	user = kdankov
+	token = 
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[push]
+	default = simple
