@@ -1,3 +1,19 @@
+# Custom global vars
+export APACHE_VHOSTS_ROOT_DIR='/Users/koko/Sites/rhyndo/'
+export APACHE_VHOSTS_CONF_DIR='/etc/apache2/vhosts/'
+
+export MYSQL_DATA_DIR='/usr/local/var/mysql/'
+export MYSQL_HOST='127.0.0.1'
+export MYSQL_ROOT_USER='root'
+export MYSQL_ROOT_PASS='opteron'
+
+export DEFAULT_MYSQL_USER_PASS='testing'
+
+export DEFAULT_WORDPRESS_USER_NAME='koko'
+export DEFAULT_WORDPRESS_USER_EMAIL='konstantin.dankov@gmail.com'
+export DEFAULT_WORDPRESS_USER_PASS='testing'
+
+# Standart system vars
 export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
