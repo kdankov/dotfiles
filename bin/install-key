@@ -1,4 +1,4 @@
-#!/bin/env ruby -w
+#!/usr/bin/env ruby
 
 # Originally from http://github.com/adamcooke/key-installer/tree/master
 
@@ -43,7 +43,7 @@ module KeyInstaller
     end
     
     ## Set the command to run on the remote server:
-    ssh_command    = %Q{echo '#{public_key}' | ssh #{host} -p #{ssh_port} "mkdir -p .ssh && cat - >> .ssh/authorized_keys2"}
+    ssh_command    = %Q{echo '#{public_key}' | ssh #{host} -p #{ssh_port} "mkdir -p .ssh && cat - >> .ssh/authorized_keys"}
 
     if %x[ #{ssh_command} ] == ''
       puts " ** Key installed to '#{host}' successfully."
