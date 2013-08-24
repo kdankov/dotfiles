@@ -18,11 +18,10 @@ export DEFAULT_DRUPAL_USER_EMAIL='konstantin.dankov@gmail.com'
 export DEFAULT_DRUPAL_USER_PASS='testing'
 
 # Standart system vars
-# export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
 export EDITOR='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$HOME/.rvm/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$PATH
 
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 

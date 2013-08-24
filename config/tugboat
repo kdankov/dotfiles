@@ -1,0 +1,8 @@
+---
+authentication:
+  client_key: Sv6Ks7fZtZ7NEv0awTXAd
+  api_key: kzRq12yNuJad9FgrhsVytGAYOBQsQSTT5D1YkssEn
+ssh:
+  ssh_user: koko
+  ssh_key_path: /Users/koko/.ssh/id_rsa
+  ssh_port: '22'
