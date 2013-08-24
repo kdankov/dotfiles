@@ -1,3 +1,6 @@
 [submodule "config/vim"]
 	path = config/vim
 	url = git@github.com:kdankov/vim.git
+[submodule "bin"]
+	path = bin
+	url = https://github.com/kdankov/bash-scripts
