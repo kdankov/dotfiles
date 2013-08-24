@@ -39,6 +39,12 @@ alias ff='open -a Firefox'
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
+# Sass & Compass
+alias cw='compass watch'
+
+# Jekyll
+alias jw='jekyll serve -w'
+
 # Git
 function g {
     if [[ $# > 0 ]]; then

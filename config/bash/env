@@ -22,7 +22,14 @@ export EDITOR='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$PATH
-
+ 
+# Bash completion
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+
+# WP-CLI directory
+export PATH=/Users/koko/.wp-cli/bin:$PATH
+
+# WP-CLI Bash completions
+source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
 
 set -o vi
