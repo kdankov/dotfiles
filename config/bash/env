@@ -22,7 +22,12 @@ export EDITOR='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$PATH
- 
+
+# In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty
+# value, unstaged (*) and staged (+) changes will be shown next
+# to the branch name.
+export GIT_PS1_SHOWDIRTYSTATE=1
+
 # WP-CLI directory & Bash completions
 export PATH=/Users/koko/.wp-cli/bin:$PATH
 source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
@@ -36,15 +41,5 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-# Inspired by: http://henrik.nyh.se/2008/12/git-dirty-prompt
-function parse_git_dirty {
-  [[ $(git status -s 2> /dev/null | sed 's/^ *//;s/ *$//') != '' ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/($(parse_git_dirty)\1)/"
-}
-
-# username@machine[dir](master)$   # clean working directory
-# username@machine[dir](*master)$  # dirty working directory
-export PS1='\u@\h[$(basename "${PWD}")]$(parse_git_branch)\$ '
-#export PS1="\n\u:\w \[\033[1;33m\]\[\033[0m\]$(parse_git_branch) \n→ "
+# user:path [branch *] 
+export PS1='\[\e[1;33m\]\n\u:\[\e[0;33m\]\w\[\e[0m\]\[\e[32m\] $(__git_ps1 "[%s]")\[\e[0m\]  \n→ '
