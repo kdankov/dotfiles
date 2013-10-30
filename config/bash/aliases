@@ -4,7 +4,7 @@
 alias reload='source ~/.dotfiles/config/bash/aliases'
 alias start="consular start"
 
-# Common -- Some are from Damian Conway
+# Common
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
@@ -15,12 +15,13 @@ function cdc() {
 }
 alias cls='clear; ls -lahGt'
 alias h='history'
-alias l='ls -lahGt'  # -l long listing, most recent first
+alias l='ls -lah'  # -l long listing, most recent first
+alias lr='ls -lahGt'  # -l long listing, most recent first
 alias lh="ls -lh"
 alias ll='ls -lhG'  # -l long listing, human readable, no group info
 alias lt='ls -lt' # sort with recently modified first
 alias md='mkdir -p'
-alias s='cd ..'   # up one dir
+alias up='cd ..'   # up one dir
 
 function take() { 
     mkdir -p "$1"
@@ -83,8 +84,7 @@ function ct() {
 function aiff2mp3() { 
   lame -h -V 0 $1.aif $1.mp3 
 }
+
 function wav2mp3() { 
   lame -h -V 0 $1.wav $1.mp3 
 }
-
-
