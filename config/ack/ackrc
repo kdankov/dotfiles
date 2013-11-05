@@ -1,1 +1,7 @@
+-l
+
+--color
+ 
 --type-add=css=scss
+--type-set=json=.json
+

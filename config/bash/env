@@ -1,4 +1,8 @@
 # Custom global vars
+export USE_CONSULAR=1
+
+export HOSTS_FILE='/etc/hosts'
+
 export APACHE_VHOSTS_ROOT_DIR='/Users/koko/Sites/rhyndo/'
 export APACHE_VHOSTS_CONF_DIR='/etc/apache2/vhosts/'
 
