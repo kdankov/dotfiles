@@ -34,7 +34,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 # WP-CLI directory & Bash completions
 export PATH=/Users/koko/.wp-cli/bin:$PATH
-source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
+source $HOME/.dotfiles/config/bash/wp-completion.bash
 
 # Use Vim bindings in Bash
 set -o vi
