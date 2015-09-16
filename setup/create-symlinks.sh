@@ -13,6 +13,10 @@ echo -e "--- Git --- \n"
 ln -s ~/.dotfiles/config/git/gitconfig ~/.gitconfig
 echo -e "--- DONE --- ln -s ~/.dotfiles/config/git/gitconfig ~/.gitconfig \n \n"
 
+echo -e "--- Git --- \n"
+ln -s ~/.dotfiles/config/ack/ackrc ~/.ackrc
+echo -e "--- DONE --- ln -s ~/.dotfiles/config/git/gitconfig ~/.gitconfig \n \n"
+
 echo -e "--- Vim --- \n"
 ln -s ~/.dotfiles/config/vim ~/.vim
 ln -s ~/.dotfiles/config/vim/vimrc ~/.vimrc

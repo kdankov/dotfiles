@@ -9,7 +9,7 @@ export APACHE_VHOSTS_CONF_DIR='/etc/apache2/vhosts/'
 export MYSQL_DATA_DIR='/usr/local/var/mysql/'
 export MYSQL_HOST='127.0.0.1'
 export MYSQL_ROOT_USER='root'
-export MYSQL_ROOT_PASS='opteron'
+export MYSQL_ROOT_PASS='Opter0n'
 
 export DEFAULT_MYSQL_USER_PASS='testing'
 
