@@ -30,7 +30,7 @@ export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$
 # In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty
 # value, unstaged (*) and staged (+) changes will be shown next
 # to the branch name.
-export GIT_PS1_SHOWDIRTYSTATE=1
+#export GIT_PS1_SHOWDIRTYSTATE=1
 
 # WP-CLI directory & Bash completions
 export PATH=/Users/koko/.wp-cli/bin:$PATH
