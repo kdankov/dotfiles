@@ -22,7 +22,7 @@ alias ll='ls -lhG'  # -l long listing, human readable, no group info
 alias lt='ls -lt' # sort with recently modified first
 alias md='mkdir -p'
 alias up='cd ..'   # up one dir
-
+alias cdvvv='cd ~/Sites/vvv/www/'
 function take() { 
     mkdir -p "$1"
     cd "$1" 
