@@ -9,7 +9,7 @@ export APACHE_VHOSTS_CONF_DIR='/etc/apache2/vhosts/'
 export MYSQL_DATA_DIR='/usr/local/var/mysql/'
 export MYSQL_HOST='127.0.0.1'
 export MYSQL_ROOT_USER='root'
-export MYSQL_ROOT_PASS='Opter0n'
+export MYSQL_ROOT_PASS='testing'
 
 export DEFAULT_MYSQL_USER_PASS='testing'
 
@@ -25,7 +25,7 @@ export DEFAULT_DRUPAL_USER_PASS='testing'
 export EDITOR='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/usr/bin:/usr/local/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$PATH
 
 # In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty
 # value, unstaged (*) and staged (+) changes will be shown next
@@ -46,4 +46,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # user:path [branch *] 
-export PS1='\[\e[1;33m\]\n\u:\[\e[0;33m\]\w\[\e[0m\]\[\e[32m\] $(__git_ps1 "[%s]")\[\e[0m\]  \n→ '
+a=$HOSTNAME
+aa=${a,,}
+export PS1='\[\e[1;33m\]\n\u:\h \[\e[0;33m\]\w\[\e[0m\]\[\e[32m\] $(__git_ps1 "[%s]")\[\e[0m\]  \n→ '
