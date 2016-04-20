@@ -25,7 +25,7 @@ export DEFAULT_DRUPAL_USER_PASS='testing'
 export EDITOR='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:/usr/local/go/bin:~/.dotfiles/bin:$PATH
 
 # In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty
 # value, unstaged (*) and staged (+) changes will be shown next
@@ -40,10 +40,15 @@ source $HOME/.dotfiles/config/bash/wp-completion.bash
 set -o vi
 
 # Bash completion
-source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+#source `brew --prefix`/usr/local/etc/bash_completion.d
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+
+export GOPATH=/usr/local/go
 
 # user:path [branch *] 
 a=$HOSTNAME

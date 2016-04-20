@@ -4,6 +4,9 @@
 alias reload='source ~/.dotfiles/config/bash/aliases'
 alias start="consular start"
 
+# Docker
+alias docker-up='docker-machine start default && eval "$(docker-machine env default)"'
+
 # Common
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"

@@ -17,7 +17,7 @@ brew install findutils
 brew install bash
 
 # Install Vim
-brew install vim
+# brew install vim
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
@@ -39,13 +39,20 @@ binaries=(
   tree
   ack
   wget
-  git
   hub
-  macvim
+  macvim --override-system-vim
   gh
   youtube-dl
   ios-sim
   imagemagick
+  curl
+  bradp/vv/vv
+  mercurial
+  git
+  openssl
+  mysql
+  mongodb
+  bash-completion
 )
 
 echo "Installing binaries ..."
@@ -59,12 +66,16 @@ brew install caskroom/cask/brew-cask
 
 # Apps
 apps=(
+  1password
+  dropbox
   iterm2
   sublime-text3
   firefox
   chromium
   evernote
   alfred
+  audio-hijack
+  telegram
   chitchat
   cleanmymac
   dropbox
@@ -79,7 +90,6 @@ apps=(
   catch
   googleappengine
   istat-menus
-  mailbox
   sequel-pro
   viber
   spotify

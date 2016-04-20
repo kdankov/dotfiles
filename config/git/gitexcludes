@@ -10,6 +10,7 @@
 .Trashes
 
 # Vim 
+.vimrc
 .*.sw[a-z]
 *.un~
 Session.vim
