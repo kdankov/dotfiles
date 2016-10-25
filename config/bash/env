@@ -1,10 +1,5 @@
 # Custom global vars
-export USE_CONSULAR=1
-
 export HOSTS_FILE='/etc/hosts'
-
-export APACHE_VHOSTS_ROOT_DIR='/Users/koko/Sites/rhyndo/'
-export APACHE_VHOSTS_CONF_DIR='/etc/apache2/vhosts/'
 
 export MYSQL_DATA_DIR='/usr/local/var/mysql/'
 export MYSQL_HOST='127.0.0.1'
@@ -16,10 +11,6 @@ export DEFAULT_MYSQL_USER_PASS='testing'
 export DEFAULT_WORDPRESS_USER_NAME='koko'
 export DEFAULT_WORDPRESS_USER_EMAIL='konstantin.dankov@gmail.com'
 export DEFAULT_WORDPRESS_USER_PASS='testing'
-
-export DEFAULT_DRUPAL_USER_NAME='koko'
-export DEFAULT_DRUPAL_USER_EMAIL='konstantin.dankov@gmail.com'
-export DEFAULT_DRUPAL_USER_PASS='testing'
 
 # Standart system vars
 export EDITOR='vim'
@@ -40,18 +31,20 @@ source $HOME/.dotfiles/config/bash/wp-completion.bash
 # Use Vim bindings in Bash
 set -o vi
 
-# Bash completion
-#source `brew --prefix`/usr/local/etc/bash_completion.d
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+##
+# Homebrew
+##
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+##
+# Homebrew bash completion
+##
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+source $(brew --prefix)/etc/bash_completion
 fi
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-
-export GOPATH=/usr/local/go
-
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#export GOPATH=/usr/local/go
 # user:path [branch *] 
-a=$HOSTNAME
-aa=${a,,}
 export PS1='\[\e[1;33m\]\n\u:\h \[\e[0;33m\]\w\[\e[0m\]\[\e[32m\] $(__git_ps1 "[%s]")\[\e[0m\]  \n→ '
