@@ -25,7 +25,8 @@ export DEFAULT_DRUPAL_USER_PASS='testing'
 export EDITOR='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-export PATH=/usr/local/bin:/usr/bin:~/bin:/usr/local/mysql/bin:/usr/local/go/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:~/bin:/usr/local/mysql/bin:/usr/local/go/bin:~/.dotfiles/bin:$PATH
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 
 # In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty
 # value, unstaged (*) and staged (+) changes will be shown next
