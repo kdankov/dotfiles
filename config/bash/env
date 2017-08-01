@@ -31,6 +31,9 @@ source $HOME/.dotfiles/config/bash/wp-completion.bash
 # Use Vim bindings in Bash
 set -o vi
 
+# Bash completion for Tmuxinator
+#source ~/.bin/tmuxinator.bash
+
 ##
 # Homebrew
 ##

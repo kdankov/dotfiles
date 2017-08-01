@@ -16,12 +16,8 @@ brew install findutils
 # Install Bash 4
 brew install bash
 
-# Install Vim
-# brew install vim
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
+# Install zsh
+brew install zsh
 
 # Install SSHPass
 brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb
@@ -103,4 +99,5 @@ apps=(
 echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
+# Link Alfred
 brew cask alfred link

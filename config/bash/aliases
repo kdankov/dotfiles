@@ -43,11 +43,20 @@ alias ff='open -a Firefox'
 alias tu='top -o cpu' # cpu
 alias tm='top -o vsize' # memory
 
-# Sass & Compass
-alias cw='compass watch'
+# brew services
+alias bs='brew services'
+alias bsl='brew services list'
+alias bss='brew services start'
+alias bsr='brew services restart'
+alias bst='brew services stop'
+alias bsc='brew services cleanup'
 
-# Jekyll
-alias jw='jekyll serve -w'
+alias sbs='sudo brew services'
+alias sbsl='sudo brew services list'
+alias sbss='sudo brew services start'
+alias sbsr='sudo brew services restart'
+alias sbst='sudo brew services stop'
+alias sbsc='sudo brew services cleanup'
 
 # Git
 function g {
