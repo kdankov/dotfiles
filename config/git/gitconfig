@@ -8,8 +8,9 @@
 [alias]
 	co = checkout
 	br = branch
+
 [core]
-	editor = mvim
+	editor = vim
 	autocrlf = input
 	excludesfile = ~/.dotfiles/config/git/gitexcludes
 
@@ -34,3 +35,8 @@
     untracked = cyan
 [push]
 	default = simple
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
