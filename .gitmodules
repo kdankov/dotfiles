@@ -1,9 +1,0 @@
-[submodule "config/vim"]
-	path = config/vim
-	url = git@github.com:kdankov/vim.git
-[submodule "bin"]
-	path = bin
-	url = git@github.com:kdankov/bash-scripts.git
-[submodule "config/zsh"]
-	path = config/zsh
-	url = git@github.com:kdankov/prezto.git
