@@ -13,8 +13,12 @@ echo -e "--- Git --- "
 ln -s ~/.dotfiles/config/git/gitconfig ~/.gitconfig
 echo -e "| --- DONE --- \n \n"
 
-echo -e "--- Git --- "
+echo -e "--- Ack --- "
 ln -s ~/.dotfiles/config/ack/ackrc ~/.ackrc
+echo -e "| --- DONE --- \n \n"
+
+echo -e "--- Tmux --- "
+ln -s ~/.dotfiles/config/tmux/tmux.conf ~/.tmux.conf
 echo -e "| --- DONE --- \n \n"
 
 echo -e "----------------------------------------------------"
