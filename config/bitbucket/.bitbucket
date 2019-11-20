@@ -1,0 +1,3 @@
+[options]
+scm = <git>
+protocol = <ssh>
