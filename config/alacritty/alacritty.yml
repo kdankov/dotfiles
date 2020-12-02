@@ -20,9 +20,8 @@ font:
   bold_italic:
     family: Fira Code
     style: Bold Italic
-  size: 14.0
+  size: 15.0
   use_thin_strokes: true
-dynamic_title: true
 live_config_reload: true
 
 mouse:
