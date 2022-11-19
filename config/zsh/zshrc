@@ -3,53 +3,13 @@ source "${HOME}/.zgen/zgen.zsh"
 
 zgen load subnixr/minimal
 
-# PATH
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/Users/koko/.local/bin:$PATH"
+export EDITOR="nvim"
 
-# GNU and BSD (macOS) ls flags aren't compatible
-ls --version &>/dev/null
-if [ $? -eq 0 ]; then
-  lsflags="--color --group-directories-first -F"
-else
-  lsflags="-GF"
-  export CLICOLOR=1
-fi
-
-# Aliases
-alias ls="ls ${lsflags}"
-alias ll="ls ${lsflags} -lah"
-alias la="ls ${lsflags} -la"
-
-alias h="history"
-alias hg="history -1000 | grep -i"
-alias ,="cd .."
-alias m="less"
-
-alias vim="nvim"
-alias v="nvim"
-
-alias rc="source ~/.zshrc"
-
-alias t="tmux"
-alias tn="tmux new-session -t"
-alias tl="tmux ls"
-alias tr="tmuxp load"
-
-alias b="brew install"
-alias bi="brew install"
-alias bic="brew install --cask"
-alias ba="arch -arm64 brew"
-alias bai="arch -arm64 brew install"
-
-# GIT
-# Do this: git config --global url.ssh://git@github.com/.insteadOf https://github.com
-alias g="git status --short"
-alias gd="git diff"
-alias gs="git status 2>/dev/null"
-function gc() { git clone ssh://git@github.com/"$*" }
-function gg() { git commit -m "$*" }
+# Load seperated config files
+for conf in "$HOME/.dotfiles/config/zsh/config.d/"*.zsh; do
+  source "${conf}"
+done
+unset conf
 
 # Tab completion
 autoload -Uz compinit && compinit
@@ -62,5 +22,3 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # These "eat" the auto prior space after a ta
 setopt interactive_comments     # allow # comments in shell; good for copy/paste
 unsetopt correct_all            # I don't care for 'suggestions' from ZSH
 export BLOCK_SIZE="'1"          # Add commas to file sizes
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
