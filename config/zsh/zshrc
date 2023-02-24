@@ -22,3 +22,16 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # These "eat" the auto prior space after a ta
 setopt interactive_comments     # allow # comments in shell; good for copy/paste
 unsetopt correct_all            # I don't care for 'suggestions' from ZSH
 export BLOCK_SIZE="'1"          # Add commas to file sizes
+
+#JAVA
+export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
+export JAVA_HOME="/usr/local/opt/openjdk@11"
+
+#Local bin
+export PATH="${HOME}/.local/bin:$PATH"
+
+export NEOVIDE_FRAME="buttonless"
+
+function https-server() {
+  http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
+}
