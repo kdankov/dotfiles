@@ -35,3 +35,5 @@ export NEOVIDE_FRAME="buttonless"
 function https-server() {
   http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
 }
+export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+export JAVA_HOME="/usr/local/opt/openjdk@17"
