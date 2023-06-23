@@ -22,3 +22,6 @@ ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # These "eat" the auto prior space after a ta
 setopt interactive_comments     # allow # comments in shell; good for copy/paste
 unsetopt correct_all            # I don't care for 'suggestions' from ZSH
 export BLOCK_SIZE="'1"          # Add commas to file sizes
+
+eval "$(rbenv init - zsh)"
+

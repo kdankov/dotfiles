@@ -5,7 +5,7 @@ alias gd="git diff"
 alias gs="git status 2>/dev/null"
 function gc() { git clone ssh://git@github.com/"$*" }
 function gg() { git commit -m "$*" }
-g() {
+function g() {
 	if (( $# == 0 )) then
 		git status
 	else
@@ -13,7 +13,7 @@ g() {
 	fi
 }
 
-gcam() {
+function gcam() {
 	git commit -am "$1"
 	git push
 }

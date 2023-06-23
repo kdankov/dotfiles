@@ -1,26 +1,26 @@
 # Apps
 apps=(
+
+  firefox
+  chromium
+  google-chrome
+  google-chrome-canary
+
+  moom
+  alfred
+
+  telegram
+  slack
+  viber
+
   1password
   dropbox
   iterm2
-  firefox
-  chromium
-  alfred
   audio-hijack
-  telegram
-  slack
-  skype
-  4k-video-downloader
-  4k-youtube-to-mp3
   adobe-creative-cloud
-  transmission
-  gitup
   istat-menus
   sequel-pro
-  viber
   spotify
-  virtualbox
-  moom
 )
 
 # Install apps to /Applications
