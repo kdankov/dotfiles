@@ -23,17 +23,29 @@ setopt interactive_comments     # allow # comments in shell; good for copy/paste
 unsetopt correct_all            # I don't care for 'suggestions' from ZSH
 export BLOCK_SIZE="'1"          # Add commas to file sizes
 
-#JAVA
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export JAVA_HOME="/usr/local/opt/openjdk@11"
+# --- Update PATH --- 
 
-#Local bin
+# Local bin priority
 export PATH="${HOME}/.local/bin:$PATH"
 
-export NEOVIDE_FRAME="buttonless"
+# Java Home
+export PATH="/usr/local/opt/openjdk@19/bin:$PATH"
+export JAVA_HOME="/usr/local/opt/openjdk@19"
+
+# Curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
 
 function https-server() {
-  http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
+http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
 }
-export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
-export JAVA_HOME="/usr/local/opt/openjdk@17"
+
+function podaudiof(){
+yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s' '$1'
+}
+
+alias tdc='ssh -t friday "cd /mnt/vault2/Torrents/downloads/complete; bash -l"'
+alias wslap='ngrok http "file:///Volumes/Media/Video Recordings/Slap"'
+alias podaudio="yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
