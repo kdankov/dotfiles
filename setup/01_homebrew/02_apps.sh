@@ -1,5 +1,18 @@
 # Apps
 apps=(
+
+  firefox
+  chromium
+  google-chrome
+  google-chrome-canary
+
+  moom
+  alfred
+
+  telegram
+  slack
+  viber
+
   1password
   dropbox
 #  iterm2
@@ -10,10 +23,11 @@ apps=(
   telegram
   slack
   skype
+  iterm2
+  audio-hijack
   adobe-creative-cloud
   istat-menus
   sequel-pro
-  viber
   spotify
   moom
 )
