@@ -15,18 +15,27 @@ apps=(
 
   1password
   dropbox
+#  iterm2
+  firefox
+  chromium
+  alfred
+  audio-hijack
+  telegram
+  slack
+  skype
   iterm2
   audio-hijack
   adobe-creative-cloud
   istat-menus
   sequel-pro
   spotify
+  moom
 )
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing Apps ..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --cask ${apps[@]}
 
 # Cleanup
 brew cleanup
