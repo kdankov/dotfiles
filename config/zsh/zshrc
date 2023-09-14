@@ -35,3 +35,4 @@ function https-server() {
 
 export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
 export JAVA_HOME="/usr/local/opt/openjdk@17"
+
