@@ -36,15 +36,13 @@ export JAVA_HOME="/usr/local/opt/openjdk@19"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 function https-server() {
-http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
+	http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
 }
 
 function podaudiof(){
-yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s' '$1'
+	yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s' '$1'
 }
 
-alias tdc='ssh -t friday "cd /mnt/vault2/Torrents/downloads/complete; bash -l"'
-alias wslap='ngrok http "file:///Volumes/Media/Video Recordings/Slap"'
 alias podaudio="yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
