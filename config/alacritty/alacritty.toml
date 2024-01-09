@@ -32,9 +32,6 @@ mods = "Control"
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.double_click]
-threshold = 300
-
 [scrolling]
 history = 100000
 
