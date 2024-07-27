@@ -1,4 +1,11 @@
-import = ["/Users/koko/.config/alacritty/catppuccin/catppuccin-frappe.toml"]
+import = [
+# uncomment the flavour you want below:
+	# "~/.config/alacritty/catppuccin/catppuccin-latte.toml"
+	# "~/.config/alacritty/catppuccin/catppuccin-frappe.toml"
+	"~/.config/alacritty/catppuccin/catppuccin-macchiato.toml"
+	# "~/.config/alacritty/catppuccin/catppuccin-mocha.toml"
+]
+
 live_config_reload = true
 
 [env]

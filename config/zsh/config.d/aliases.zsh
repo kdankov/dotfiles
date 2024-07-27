@@ -1,8 +1,8 @@
 # navigation 
 alias sites="cd ~/Sites"
 
-alias ls="exa --long"
-alias ll="exa --long -all"
+alias ls="eza --long"
+alias ll="eza --long -all"
 
 alias h="history"
 alias hg="history -1000 | grep -i"

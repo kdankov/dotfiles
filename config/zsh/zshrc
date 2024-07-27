@@ -29,8 +29,8 @@ export BLOCK_SIZE="'1"          # Add commas to file sizes
 export PATH="${HOME}/.local/bin:$PATH"
 
 # Java Home
-export PATH="/usr/local/opt/openjdk@19/bin:$PATH"
-export JAVA_HOME="/usr/local/opt/openjdk@19"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME="/opt/homebrew/opt/openjdk"
 
 # Curl
 export PATH="/usr/local/opt/curl/bin:$PATH"
@@ -46,4 +46,3 @@ function podaudiof(){
 alias podaudio="yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/ruby/bin:$PATH"
