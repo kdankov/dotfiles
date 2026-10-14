@@ -1,24 +1,18 @@
-# Ghostty config, ported from ~/.dotfiles/config/alacritty/alacritty.toml
-# Reload after editing with cmd+shift+, (Ghostty has no live_config_reload
-# equivalent — it re-reads this file on that keybind or on restart).
+# Ghostty config
+# Reload after editing with cmd+shift+, (or restart Ghostty).
 
 # ── font ──────────────────────────────────────────────────────────────────
-# Alacritty asked for "FiraCode Nerd Font"; the family actually installed
-# here is "FiraCode Nerd Font Mono" (see `ghostty +list-fonts`). Bold,
-# italic and bold-italic faces are resolved from the same family
-# automatically, so the four separate [font.*] blocks aren't needed.
+# The installed family is "FiraCode Nerd Font Mono" (see `ghostty +list-fonts`).
+# Bold, italic and bold-italic faces are resolved from it automatically.
 font-family = FiraCode Nerd Font Mono
 font-size = 16
 
 # ── colors ────────────────────────────────────────────────────────────────
-# Ghostty ships Catppuccin, so the imported catppuccin-macchiato.toml is
-# replaced by the built-in theme.
 theme = Catppuccin Macchiato
 
-# Two deliberate overrides so colors match Alacritty exactly: Catppuccin's
-# Alacritty theme reuses the normal hues for bright 9-14 (Ghostty's built-in
-# brightens them), and uses rosewater for the selection. Delete this block
-# to get Ghostty's stock Catppuccin look instead.
+# Overrides on top of the built-in theme: bright 9-14 reuse the normal hues
+# (Ghostty's built-in brightens them), and the selection uses rosewater.
+# Delete this block to get Ghostty's stock Catppuccin look instead.
 palette = 9=#ed8796
 palette = 10=#a6da95
 palette = 11=#eed49f
@@ -41,19 +35,16 @@ background-opacity = 1
 macos-titlebar-style = hidden
 
 # ── shell / terminal ──────────────────────────────────────────────────────
-# Carried over from Alacritty's [env]. Note that Ghostty's own terminfo
-# (xterm-ghostty) unlocks features this hides; drop this line if you don't
-# need the compatibility.
+# Ghostty's own terminfo (xterm-ghostty) unlocks features this hides; drop
+# this line if you don't need the compatibility.
 term = xterm-256color
 
-# Alacritty counted scrollback in lines (100000); Ghostty budgets it in
-# BYTES per surface (default 10000000 = 10MB). ~100MB is a rough equivalent
-# for very long history — lower it if memory use bothers you.
+# Scrollback is budgeted in BYTES per surface (default 10000000 = 10MB).
+# ~100MB keeps very long history; lower it if memory use bothers you.
 scrollback-limit = 100000000
 
 # ── keybinds ──────────────────────────────────────────────────────────────
 keybind = ctrl+digit_6=text:\x1e
 keybind = shift+enter=text:>
 
-# Alacritty's middle-click PasteSelection needs no config: middle-click
-# paste is always enabled in Ghostty, and copy-on-select defaults to true.
+# Middle-click paste is always enabled, and copy-on-select defaults to true.
