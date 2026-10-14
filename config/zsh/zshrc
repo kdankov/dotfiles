@@ -1,64 +1,36 @@
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
+# Drop duplicate PATH/fpath entries
+typeset -U path fpath
 
-zgen load subnixr/minimal
+# Prompt theme (subnixr/minimal; zgen was only used to load this one file)
+source "${HOME}/.zgen/subnixr/minimal-master/minimal.zsh"
 
 export EDITOR="nvim"
 
-# Load seperated config files
+# Load separated config files
 for conf in "$HOME/.dotfiles/config/zsh/config.d/"*.zsh; do
   source "${conf}"
 done
 unset conf
 
-# Tab completion
-autoload -Uz compinit && compinit
+# Tab completion (full security check only once a day; otherwise use the cached dump)
+setopt extendedglob             # needed for the (#q...) glob qualifier below
+autoload -Uz compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then compinit && touch ~/.zcompdump; else compinit -C; fi
 setopt complete_in_word         # cd /ho/sco/tm<TAB> expands to /home/scott/tmp
-setopt auto_menu                # show completion menu on succesive tab presses
-setopt autocd                   # cd to a folder just by typing it's name
+setopt auto_menu                # show completion menu on successive tab presses
+setopt autocd                   # cd to a folder just by typing its name
 ZLE_REMOVE_SUFFIX_CHARS=$' \t\n;&' # These "eat" the auto prior space after a tab complete
 
 # MISC
 setopt interactive_comments     # allow # comments in shell; good for copy/paste
 unsetopt correct_all            # I don't care for 'suggestions' from ZSH
-export BLOCK_SIZE="'1"          # Add commas to file sizes
 
-# --- Update PATH --- 
-
-# Local bin priority
-export PATH="${HOME}/.local/bin:$PATH"
-
-# Java Home
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk"
-
-# Curl
-export PATH="/usr/local/opt/curl/bin:$PATH"
-
-function https-server() {
-	http-server --ssl --cert ~/.localhost-ssl/localhost.crt --key ~/.localhost-ssl/localhost.key
-}
-
-function podaudiof(){
-	yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s' '$1'
-}
-
+# Download audio only, as mp3: podaudio <url>
 alias podaudio="yt-dlp -f 'ba' -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Quick cd into iCloud Drive
+alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias prd="pnpm run dev"
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
-  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-  export PATH=`gem environment gemdir`/bin:$PATH
-fi
-
-# bun completions
-[ -s "/Users/koko/.bun/_bun" ] && source "/Users/koko/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Re-apply dedupe (export PATH=... assignments bypass typeset -U)
+path=($path)

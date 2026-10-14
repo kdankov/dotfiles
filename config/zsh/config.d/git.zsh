@@ -8,12 +8,12 @@ g() {
 	if (( $# == 0 )) then
 		git status --short
 	else
-		git $1
+		git "$@"
 	fi
 }
 
-gcl() { 
-    git clone ssh://git@github.com/"$*" 
+gcl() {
+	git clone ssh://git@github.com/"$*"
 }
 
 gcm() {
